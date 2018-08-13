@@ -107,149 +107,123 @@
             </li>
           </aside>
         </section>
+
         <section>
-          <img src="images/logo-title-light.png" class="nostyle" />
+          <img src="images/gatsby.svg" class="nostyle" />
           <aside class="notes">
-            Redux is a predictable state container for JavaScript apps.
-            It helps you write applications that behave consistently,
-            run in different environments (client, server, and native),
-            and are easy to test.
+            Gatsby is a static site builder built with React.  You can think of it as a React
+            based tool for building static HTML sites. With most static site builders you would
+            think of the data source being markdown, but the Gatsby the datasource can be many different
+            things because of the adapters hat it provides. Drupal, Wordperss, APIs, JSON, Markdown and 
+            many others.
+
+            - First created in 2015. Open source
           </aside>
         </section>
 
-        What is gatsbyjj
-        Intent - What are its use cases / What projects will benefit from it
-        What kind of dev experience does it offer
-        How is it different from other static site generators
+        <section>
+          <h3>What is a Static Site Generator (SSG)?</h3>
+          <ul>
+            <li>Traditional Sites generate HTML on request (Drupal, Wordpress, etc.)</li>
+            <li>SSG build the site HTML ahead of time and then only send HTML/JS/CSS to a server</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Why would you ever need a static site?</h3>
+          <ul>
+            <li class="fragment">Crawlable site (Not only Googlebot)</li>
+            <li class="fragment">'Time to Interactive' would be much faster</li>
+            <li class="fragment">Reduced server costs</li>
+            <li class="fragment">Increased Security</li>
+          </ul>
+          <aside class="notes">
+            - Usually there are many other bots out there besides google that you might what to access your site.
+              Facebook, news aggregationand more.
+            - Time to Intactive has become one of the leading markers that people use to specify the speed of a site.
+              Time to Interactive is defined as the point at which layout has stabilized, key webfonts are visible, and the main thread is available enough to handle user input.
+              There are many studies done but it seems like 3 seconds is the cut off for a user until the abandon the site and move on.
+              So either you deliver on this metric or possibly miss out on a high percentage of site visitors.
+            - Reducing the costs of your server.  Hosting static files is cheap and there are many hosting options.
+              Compare this to the cost of hosting a production level DB and CPU cycles.  Also static files can easily
+              be replicated accross the world on content delivery networks.
+            - There is no production database or admin interface, so much less surface area of an attacker.
+          </aside>
+        </section>
+
+        <section>
+          <h3>When would not use a static site?</h3>
+          <ul>
+            <li class="fragment">Building an actual web application</li>
+          </ul>
+          <aside class="notes">
+            - Is there a login and is the content that this particular person uses unique to them.
+            - Think twitter or facebook. It wouldn't make much sense to build static pages if the content on each page is unique.
+          </aside>
+        </section>
+
+        <section>
+          <h3>How is Gatsby different from all the others?</h3>
+          <ul>
+            <li class="fragment">Performance is one of the most important features</li>
+            <li class="fragment">PWA out of the box (PRPL pattern)</li>
+            <li class="fragment">All templates/components are built in React</li>
+            <li class="fragment">Unopinoinated on where the data is stored or what kind of data it is</li>
+          </ul>
+          <section>
+            <h3>What is the PRPL pattern</h3>
+            <ul>
+              <li><b>Push</b> critical resources for the initial URL route.</li>
+              <li><b>Render</b> initial route.</li>
+              <li><b>Pre-cache</b> remaining routes.</li>
+              <li><b>Lazy-load</b> and create remaining routes on demand.</li>
+            </ul>
+          </section>
+          <aside class="notes">
+            - Gatsby was first built to improve the speed of a React based website. If you read there docs and feature lists
+              you will start to see the importance in their technology for performance related decisions.
+            - Gatsby is also one of the only Static Site generators that actually generates a PWA out of the box.  Meaning that
+              it uses a service worker for offline access, link prefetching, and heavy use of page caching.
+            - All templates/components are built with React/JSX so if you like the props down pattern and expressiveness
+              of JSX this might be for you.  Also you can use a lot of the existing Eco-systems components for your site.
+            - For me this is one of the most interesting aspects. The data sources can be markdown, JSON, or even 
+              an existing CMS system.  Gatsby provides 'Source Plugins' to allow your components to gather data from various
+              source in a standardized format GraphQL.
+          </aside>
+        </section>
+
+        <section>
+          <h3>Lets get started.</h3>
+          <ul>
+            <li>
+              <code>npm install --global gatsby-cli</code>
+            </li>
+            <li>
+              <code>gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default#v2</code>
+            </li>
+            <li>
+              <code>cd gatsby-site; gatsby develop</code>
+            </li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Node/NPM</li>
+              <li>Webpack for blundling, resource splitting, HMR (preconfigured)</li>
+              <li>React</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <h3>Live Demo</h3>
+        </section>
+
+
+
+
         What does the code look like
-        Why would I ever use it.
-        What are some downfalls.
-        Intro to designing gatsbyjs sites
-        Hosting?
-        How does it fit into my current project?
+        What About.... ?
         Is it worth the investment in learning it?
-
-        <section>
-          <h3>Why do we need it?</h3>
-          <ul>
-            <li class="fragment">Well you may not...</li><br/>
-            <li class="fragment">Your Flux Capacitor stopped working and you need to get back to 1985</li><br/>
-            <li class="fragment">You have a large complex application state</li>
-          </ul>
-          <aside class="notes">
-            - Redux is probably not needed in your React, Vue, Angular app.
-            - Redux gives you a rely nice feature of Time travel, ie you can step backward or forward
-              to replay changes to your application state. Awesome ability but likely your app does
-              not need this
-            - Building a really large complex application and with complex state is where Redux shines.
-              Lets learn about why that is.
-          </aside>
-        </section>
-
-        <section>
-          <h3>Presentation Intent</h3>
-          <aside class="notes">
-            Learn how redux works by building a redux clone.
-          </aside>
-        </section>
-
-        <section>
-          <h3><img width=50 class="trans" src="images/warning.webp"/> Warning:</h3>
-          <p>Pseudo Code Ahead</p>
-        </section>
-
-        <section>
-          <h3>Example Simple Application:</h3>
-          <p>Baseline</p>
-          <aside class="notes">
-            This is a simple application that is
-            likely how you might create an easy little todo app.
-          </aside>
-        </section>
-
-        <section>
-          <section>
-            <p><b>Seperation of concerns</b> is the main point of Redux</p>
-          </section>
-          <section>
-            The value of <b>separation of concerns</b> is simplifying development and maintenance of computer programs.
-            When concerns are well-separated, individual sections can be reused, as well as developed
-            and updated independently.
-          </section>
-        </section>
-
-        <section>
-          <h3>The pieces of Redux</h3>
-          <ul>
-            <li>Actions</li><br/>
-            <li>Reducer</li><br/>
-            <li>Store</li>
-          </ul>
-        </section>
-
-        <section>
-          <section>
-            <h3>Actions</h3>
-            <ul>
-              <li>WHAT happened not HOW it happened</li><br/>
-              <li class="fragment">Use <b>indirection</b> to decouple.</li>
-            </ul>
-          </section>
-          <section>
-            <b>Indirection</b> is the ability to reference something using a name, reference, or container instead of the value itself.
-          </section>
-        </section>
-
-        <section>
-          <h3>Example Simple Application:</h3>
-          <p>Actions</p>
-        </section>
-
-        <section>
-          <section>
-            <h3>Reducer</h3>
-            <ul>
-              <li>(current state, action metadata) => new state</li><br/>
-              <li class="fragment">Do not mutate, Create a new state obj<br/>
-                why, because predictable changes are <b>deterministic</b>.
-              </li><br/>
-              <li class="fragment">Troubleshooting is really easy, and this makes timetravel possible</li>
-            </ul>
-          </section>
-          <section>
-            A <b>deterministic model</b> will thus always produce the same output from a given starting condition or initial state.
-            Deterministic system is a system in which no randomness is involved in the development of future states of the system.
-          </section>
-        </section>
-
-        <section>
-          <h3>Example Simple Application</h3>
-          <p>Reducer</p>
-        </section>
-
-        <section>
-          <h3>Store</h3>
-          <ul>
-            <li>State retention</li>
-            <li>Pub/Sub system</li>
-          </ul>
-          <aside class="notes">
-            You can think of the store as the state retention.  It holds the connection to the data and the reducer.
-          </aside>
-        </section>
-
-        <section>
-          <h3>Example Simple Application: Actions</h3>
-          <p>State</p>
-        </section>
-
-        <section>
-          Intial State<br/>
-          +<br/>
-          List of Previous Actions<br/>
-          =<br/>
-          Current State
-        </section>
 
         <section>
           <h2>Questions?</h2>
@@ -259,6 +233,7 @@
                 https://www.gatsbyjs.org/tutorial/
                 https://next.gatsbyjs.org/docs/querying-with-graphql/
                 https://developers.google.com/web/fundamentals/performance/prpl-pattern/
+                https://www.gatsbyjs.org/features/
             </li>
           </ul>
         </section>
