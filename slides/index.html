@@ -94,7 +94,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h3>React Static Site Generator</h3>
+          <h3>Gatsby - React Static Site Generator</h3>
           <p>
             <small>
               Josh Thomas / <a href="http://twitter.com/jthoms1">@jthoms1</a>
@@ -163,14 +163,16 @@
         </section>
 
         <section>
-          <h3>How is Gatsby different from all the others?</h3>
-          <ul>
-            <li class="fragment">Performance is one of the most important features</li>
-            <li class="fragment">PWA out of the box (PRPL pattern)</li>
-            <li class="fragment">All templates/components are built in React</li>
-            <li class="fragment">Unopinoinated on where the data is stored or what kind of data it is</li>
-          </ul>
           <section>
+            <h3>How is Gatsby different from all the others?</h3>
+            <ul>
+              <li class="fragment">Performance is one of the most important features</li>
+              <li class="fragment">PWA out of the box (PRPL pattern)</li>
+              <li class="fragment">All templates/components are built in React</li>
+              <li class="fragment">Unopinoinated on where the data is stored or what kind of data it is</li>
+            </ul>
+          </section>
+          <section data-transition="slide">
             <h3>What is the PRPL pattern</h3>
             <ul>
               <li><b>Push</b> critical resources for the initial URL route.</li>
@@ -195,15 +197,9 @@
         <section>
           <h3>Lets get started.</h3>
           <ul>
-            <li>
-              <code>npm install --global gatsby-cli</code>
-            </li>
-            <li>
-              <code>gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default#v2</code>
-            </li>
-            <li>
-              <code>cd gatsby-site; gatsby develop</code>
-            </li>
+            <pre><code class="bash">npm install --global gatsby-cli</code></pre>
+            <pre><code class="bash">gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default#v2</code></pre>
+            <pre><code class="bash">cd gatsby-site; gatsby develop</code></pre>
           </ul>
           <aside class="notes">
             <ul>
@@ -216,24 +212,56 @@
 
         <section>
           <h3>Live Demo</h3>
+          <aside class="notes">
+            Folder Structure
+            Configuration
+            - gatsby-config.js 
+          </aside>
         </section>
 
+        <section>
+          <h3>Project Configuration</h3>
+          <ul>
+            <li class="fragment"><b><code>siteMetadata</code></b> - title, publish url, description, etc.</li>
+            <li class="fragment"><b><code>plugins</code></b> - a configured list of gatsby plugins to use on the site</li>
+            <li class="fragment"><b><code>pathPrefix</code></b> - when you are not in the site root</li>
+            <li class="fragment"><b><code>mapping</code></b> - lets you cross reference available data sources for query later</li>
+            <li class="fragment"><b><code>proxy</code></b> - given a specific API path map to an external data source.</li>
+          </ul>
+          <aside class="notes">
 
+          </aside>
+        </section>
 
+        <section>
+          <h3>So you like Plugins, We got a lot.</h3>
+          <ul>
+            <li class="fragment"><b>Code</b> - Typescript, JSS, SASS, LESS, Glamour, Coffeescript, Stylus, etc.</li>
+            <li class="fragment"><b>Data Source</b> - Drupal, Wordpress, Wikipedia, npm, filesystem, mongodb, etc.</li>
+          </ul>
+        </section>
 
-        What does the code look like
-        What About.... ?
-        Is it worth the investment in learning it?
+        <section>
+          <h3>Advanced API Usage</h3>
+          <ul>
+            <li class="fragment"><b>Node APIs</b><br/>https://next.gatsbyjs.org/docs/node-apis/</li>
+            <li class="fragment"><b>Browser APIs</b><br/>https://next.gatsbyjs.org/docs/browser-apis/</li>
+            <li class="fragment"><b>SSR APIs</b><br/>https://next.gatsbyjs.org/docs/ssr-apis/</li>
+          </ul>
+        </section>
 
         <section>
           <h2>Questions?</h2>
           <br/>
           <ul>
             <li>
-                https://www.gatsbyjs.org/tutorial/
-                https://next.gatsbyjs.org/docs/querying-with-graphql/
-                https://developers.google.com/web/fundamentals/performance/prpl-pattern/
-                https://www.gatsbyjs.org/features/
+              <a href="https://www.gatsbyjs.org/tutorial/">https://www.gatsbyjs.org/tutorial/</a>
+            <li>
+              <a href="https://next.gatsbyjs.org/docs/querying-with-graphql/">https://next.gatsbyjs.org/docs/querying-with-graphql/</a>
+            <li>
+              <a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">https://developers.google.com/web/fundamentals/performance/prpl-pattern/</a>
+            <li>
+              <a href="https://www.gatsbyjs.org/features/">https://www.gatsbyjs.org/features/</a>
             </li>
           </ul>
         </section>
